@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using _3.Factories;
 using Business;
-using Entity;
+using NewEntity;
 using Repository;
+
 
 namespace ConsoleApp1
 {
@@ -10,17 +12,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-           
-            PostActions c = new PostActions();
-            c.NewPost("lebron");
-            c.NewPost("lebggron");
 
-
-            foreach (Post PA in c.viewPost())
-            {
-                Console.WriteLine("Name: {0} || Age: {1} || ID: {2} || Date Created: {3}", PA.PostBody, PA.PostType, PA.ID, PA.DateCreated);
-            }
-            Console.ReadLine();
+            Access a = new Access();
+            a.ayy();
         }
     }
 }
