@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. SocialMedia", "SocialMedia\4. SocialMedia.csproj", "{DE73E4A8-688A-4564-AF13-5ECA59A74546}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4. SocialMedia", "SocialMedia\4. SocialMedia.csproj", "{DE73E4A8-688A-4564-AF13-5ECA59A74546}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.Entity", "Domain\1.Entity.csproj", "{2DA135E3-A3BC-4996-BAF2-11C811C0AE5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.Entity", "Domain\1.Entity.csproj", "{2DA135E3-A3BC-4996-BAF2-11C811C0AE5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.Business", "Business\3.Business.csproj", "{5FA1F9D8-AD1A-48C0-9792-5C31547A3540}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.Business", "Business\3.Business.csproj", "{5FA1F9D8-AD1A-48C0-9792-5C31547A3540}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.Repository", "Repository\2.Repository.csproj", "{7F7E6A3C-EF26-45DB-ACB4-E3729DDBB022}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.Repository", "Repository\2.Repository.csproj", "{7F7E6A3C-EF26-45DB-ACB4-E3729DDBB022}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{A05F3C53-96C2-46B7-999C-0500B54C2B12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{A05F3C53-96C2-46B7-999C-0500B54C2B12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.Factories", "3.Factories\3.Factories.csproj", "{3BA38CFB-7271-460F-BF23-01D30DC60B55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A05F3C53-96C2-46B7-999C-0500B54C2B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A05F3C53-96C2-46B7-999C-0500B54C2B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A05F3C53-96C2-46B7-999C-0500B54C2B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BA38CFB-7271-460F-BF23-01D30DC60B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA38CFB-7271-460F-BF23-01D30DC60B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA38CFB-7271-460F-BF23-01D30DC60B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA38CFB-7271-460F-BF23-01D30DC60B55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

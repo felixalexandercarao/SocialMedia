@@ -41,5 +41,18 @@ namespace Repository
                 }
             };
         }
+        public List<Post> GetPostAccountList()
+        {
+            return this.postList;
+        }
+
+        public void AddPost(Post p)
+        {
+            this.postList.Add(p);
+        }
+        public void DeletePost(string deleteID)
+        {
+            this.postList.RemoveAll(s => s.ID == deleteID);
+        }
     }
 }

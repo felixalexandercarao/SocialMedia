@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Business;
+using Entity;
 using Repository;
 
 namespace ConsoleApp1
@@ -8,16 +10,16 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+           
+            PostActions c = new PostActions();
+            c.NewPost("lebron");
+            c.NewPost("lebggron");
 
-            //PersonalAccountList a = new PersonalAccountList();
-            //ViewPersonalAccount c = new ViewPersonalAccount();
-            PostList a = new PostList();
-            ViewPost c = new ViewPost();
-            AddPost d = new AddPost();
-            DeletePost e = new DeletePost();
-            d.NewPost("lebron>kobe",a.postList);
-            e.deletePost("P-002", a.postList);
-            c.viewPost(a.postList);
+
+            foreach (Post PA in c.viewPost())
+            {
+                Console.WriteLine("Name: {0} || Age: {1} || ID: {2} || Date Created: {3}", PA.PostBody, PA.PostType, PA.ID, PA.DateCreated);
+            }
             Console.ReadLine();
         }
     }

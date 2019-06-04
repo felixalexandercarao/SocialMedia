@@ -17,7 +17,7 @@ namespace Repository
                     PersonalAccountAge =22,
                     ID="PA-001",
                     Privacy="Public",
-                    DateCreated=DateTime.Today
+                    DateCreated= DateTime.Today
                 },
                 new PersonalAccount()
                 {
@@ -25,7 +25,7 @@ namespace Repository
                     PersonalAccountAge =29,
                     ID="PA-002",
                     Privacy="Public",
-                    DateCreated=DateTime.Today
+                    DateCreated= DateTime.Today
                 },
                 new PersonalAccount()
                 {
@@ -33,9 +33,23 @@ namespace Repository
                     PersonalAccountAge =21,
                     ID="PA-003",
                     Privacy="Public",
-                    DateCreated=DateTime.Today
+                    DateCreated= DateTime.Today
                 }
             };
+        }
+
+        public List<PersonalAccount> GetPersonalAccountList()
+        {
+            return this.personalAccountList;
+        }
+
+        public void AddPersonalAccount(PersonalAccount pa)
+        {
+            this.personalAccountList.Add(pa);
+        }
+        public void DeletePersonalAccount(string deleteID)
+        {
+            this.personalAccountList.RemoveAll(s=>s.ID== deleteID);
         }
     }
 }

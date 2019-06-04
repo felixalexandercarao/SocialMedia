@@ -38,5 +38,18 @@ namespace Repository
                 }
             };
         }
+        public List<FanAccount> GetFanAccountList()
+        {
+            return this.fanAccountList;
+        }
+
+        public void AddFanAccount(FanAccount fa)
+        {
+            this.fanAccountList.Add(fa);
+        }
+        public void DeleteFanAccount(string deleteID)
+        {
+            this.fanAccountList.RemoveAll(s => s.ID == deleteID);
+        }
     }
 }
