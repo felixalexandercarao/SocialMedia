@@ -9,7 +9,7 @@ namespace _03.NewBusiness
         {
             return new PrivatePage()
             {
-                PageName ="ayyy"
+                PageName ="ayyy",
             };
         }
 
