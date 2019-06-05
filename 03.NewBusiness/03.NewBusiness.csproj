@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\03.NewRepository\02.NewRepository.csproj" />
     <ProjectReference Include="..\NewEntity\01.NewEntity.csproj" />
     <ProjectReference Include="..\Repository\2.Repository.csproj" />
   </ItemGroup>

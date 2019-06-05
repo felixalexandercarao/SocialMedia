@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using _3.Factories;
+using _03.NewBusiness;
+using _03.NewRepository;
 using Business;
 using NewEntity;
 using Repository;
+
+
 
 
 namespace ConsoleApp1
@@ -12,9 +15,13 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            PageList PgL = new PageList();
 
             Access a = new Access();
-            a.ayy();
+            a.AccessPageCreate("Public");
+            Console.WriteLine("");
+            a.AccessPageCreate("Private");
+
         }
     }
 }

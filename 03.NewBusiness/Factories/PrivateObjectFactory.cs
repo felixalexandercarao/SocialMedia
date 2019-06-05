@@ -5,17 +5,27 @@ namespace _03.NewBusiness
 {
     class PrivateObjectFactory : ObjectFactory
     {
-        public override BasePage createPage()
+        public override BasePage createPage(string pageNameInput, DateTime pageDateCreated)
         {
             return new PrivatePage()
             {
-                PageName ="ayyy",
+                PageName = pageNameInput,
+                ViewablePage = false,
+                PageDateCreated=pageDateCreated,
+                SecretPageInfo="This is a secret page"
+                
             };
         }
 
-        public override BasePost createPost()
+        public override BasePost createPost(string postBodyInput, DateTime postDateCreated)
         {
-            return new PrivatePost();
+            return new PrivatePost()
+            {
+                Body=postBodyInput,
+                PostDateCreated=postDateCreated,
+                ViewablePost=false,
+                SecretPostInfo="This is a secret post"
+            };
         }
     }
 }

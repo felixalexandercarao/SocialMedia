@@ -5,7 +5,7 @@ namespace _03.NewBusiness
 {
     abstract class ObjectFactory
     {
-        public abstract BasePost createPost();
-        public abstract BasePage createPage();
+        public abstract BasePost createPost(string postBodyInput,DateTime postDateCreated);
+        public abstract BasePage createPage(string pageNameInput, DateTime pageDateCreated);
     }
 }

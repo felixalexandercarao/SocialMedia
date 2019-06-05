@@ -7,17 +7,19 @@ namespace _03.NewBusiness
 {
     class Client
     {
-        private readonly BasePost _post;
         private readonly BasePage _page;
-        public Client(ObjectFactory OF)
+        public Client(ObjectFactory OF,string pageName)
         {
-            _page = OF.createPage();
-            _post = OF.createPost();
+            _page = OF.createPage(pageName,DateTime.Now);
         }
         public string Res()
         {
-            return $"post: {_post.GetType().Name} and Page {_page.GetType().Name}";
+            return $"Page: {_page.PageName}, DateCreated: {_page.PageDateCreated}, Viewable: {_page.ViewablePage}";
         }
 
     }
+    //class newPage
+    //{
+
+    //}
 }

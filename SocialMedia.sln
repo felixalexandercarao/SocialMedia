@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.Repository", "Repository\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{A05F3C53-96C2-46B7-999C-0500B54C2B12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.NewEntity", "NewEntity\01.NewEntity.csproj", "{A6A31270-E9B3-442B-B310-9EF92159A05A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.NewEntity", "NewEntity\01.NewEntity.csproj", "{A6A31270-E9B3-442B-B310-9EF92159A05A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.NewBusiness", "03.NewBusiness\03.NewBusiness.csproj", "{2C1ACEC0-F344-447F-BEB1-BAA1A1DBDB5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.NewBusiness", "03.NewBusiness\03.NewBusiness.csproj", "{2C1ACEC0-F344-447F-BEB1-BAA1A1DBDB5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.NewRepository", "03.NewRepository\02.NewRepository.csproj", "{0F6BF025-292A-4F4D-9370-11B63BC75B5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{2C1ACEC0-F344-447F-BEB1-BAA1A1DBDB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C1ACEC0-F344-447F-BEB1-BAA1A1DBDB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C1ACEC0-F344-447F-BEB1-BAA1A1DBDB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F6BF025-292A-4F4D-9370-11B63BC75B5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F6BF025-292A-4F4D-9370-11B63BC75B5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F6BF025-292A-4F4D-9370-11B63BC75B5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F6BF025-292A-4F4D-9370-11B63BC75B5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
