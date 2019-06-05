@@ -15,12 +15,23 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            PageList PgL = new PageList();
-
             Access a = new Access();
-            a.AccessPageCreate("Public");
+            PageList PgL = new PageList();
+            Console.WriteLine("Original List");/*I print the original list*/
+            foreach (BasePage page in PgL.GetPageList())
+            {
+                Console.WriteLine("Name: {0} | Public: {1}", page.PageName, page.ViewablePage);
+            }
             Console.WriteLine("");
-            a.AccessPageCreate("Private");
+
+            a.AccessPageCreate("Public Page"); /*the method for adding a new public page and i print list while still in the method*/
+
+            Console.WriteLine("");
+            Console.WriteLine("I view the list after method is done");/*I print list again*/
+            foreach (BasePage page in PgL.GetPageList())
+            {
+                Console.WriteLine("Name: {0} | Public: {1}", page.PageName, page.ViewablePage);
+            }
 
         }
     }

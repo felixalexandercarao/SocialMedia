@@ -9,9 +9,11 @@ namespace _03.NewBusiness
     class AddObject
     {
         PageList PL = new PageList();
+        PostList PstL = new PostList();
         public void AddPage(ObjectFactory OF, string pageName)
         {
             PL.RepoAddPage(OF.createPage(pageName, DateTime.Now));
+            Console.WriteLine("In the Method:");
             foreach (BasePage pg in PL.GetPageList())
             {
                 Console.WriteLine("Name: {0} | Public: {1}", pg.PageName, pg.ViewablePage);
@@ -19,10 +21,10 @@ namespace _03.NewBusiness
         }
         public void AddPost(ObjectFactory OF, string postName)
         {
-            PL.RepoAddPage(OF.createPage(pageName, DateTime.Now));
-            foreach (BasePage pg in PL.GetPageList())
+            PstL.RepoAddPost(OF.createPost(postName, DateTime.Now));
+            foreach (BasePost pst in PstL.GetPostList())
             {
-                Console.WriteLine("Name: {0} | Public: {1}", pg.PageName, pg.ViewablePage);
+                Console.WriteLine("Body: {0} | Public: {1}", pst.Body, pst.ViewablePost);
             }
         }
     }

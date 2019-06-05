@@ -17,11 +17,11 @@ namespace _03.NewBusiness
             }
             if (s == "Private Page")
             {
-                AO.AddPage(new PrivateObjectFactory(), "New Private Page");
+                AO.AddPost(new PrivateObjectFactory(), "New Private Page");
             }
             if (s == "Private Post")
             {
-                AO.AddPage(new PrivateObjectFactory(), "New Private Post");
+                AO.AddPost(new PrivateObjectFactory(), "New Private Post");
             }
             if (s == "Public Post")
             {
