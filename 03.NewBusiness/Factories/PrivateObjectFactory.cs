@@ -3,28 +3,25 @@ using NewEntity;
 
 namespace _03.NewBusiness
 {
-    class PrivateObjectFactory : ObjectFactory
+    class PrivateObjectFactory : IObjectFactory
     {
-        public override BasePage createPage(string pageNameInput, DateTime pageDateCreated)
+        public BasePage createPage(/*string pageNameInput, DateTime pageDateCreated*/)
         {
             return new PrivatePage()
             {
-                PageName = pageNameInput,
+                PageName =string.Empty,
                 ViewablePage = false,
-                PageDateCreated=pageDateCreated,
-                SecretPageInfo="This is a secret page"
-                
+                PageDateCreated=DateTime.Now
             };
         }
 
-        public override BasePost createPost(string postBodyInput, DateTime postDateCreated)
+        public BasePost createPost(/*string postBodyInput, DateTime postDateCreated*/)
         {
             return new PrivatePost()
             {
-                Body=postBodyInput,
-                PostDateCreated=postDateCreated,
+                Body=string.Empty,
+                PostDateCreated=DateTime.Now,
                 ViewablePost=false,
-                SecretPostInfo="This is a secret post"
             };
         }
     }

@@ -5,27 +5,25 @@ using System.Text;
 
 namespace _03.NewBusiness
 {
-    class PublicObjectFactory : ObjectFactory
+    class PublicObjectFactory : IObjectFactory
     {
-        public override BasePage createPage(string pageNameInput, DateTime pageDateCreated)
+        public BasePage createPage(/*string pageNameInput, DateTime pageDateCreated*/)
         {
             return new PublicPage()
             {
-                PageName = pageNameInput,
+                PageName = string.Empty,
                 ViewablePage = true,
-                PageDateCreated = pageDateCreated,
-                NumberofFollowers = 0
+                PageDateCreated = DateTime.Now,
             };
         }
 
-        public override BasePost createPost(string postBodyInput, DateTime postDateCreated)
+        public BasePost createPost(/*string postBodyInput, DateTime postDateCreated*/)
         {
             return new PublicPost()
             {
-                Body = postBodyInput,
-                PostDateCreated = postDateCreated,
+                Body = string.Empty,
                 ViewablePost = true,
-                NumberOfLikes=1
+                PostDateCreated = DateTime.Now,
             };
         }
     }

@@ -16,16 +16,13 @@ namespace _03.NewRepository
                 {
                 PageName = "Sample Public Page",
                 ViewablePage = true,
-                PageDateCreated =DateTime.Now,
-                NumberofFollowers = 0
+                PageDateCreated =DateTime.Now
                 },
                 new PrivatePage()
                 {
                 PageName = "Sample Private Page",
                 ViewablePage = false,
-                PageDateCreated=DateTime.Now,
-                SecretPageInfo="This is a sample secret page"
-
+                PageDateCreated=DateTime.Now
                 }
             };
         }
@@ -34,8 +31,9 @@ namespace _03.NewRepository
             return this.pageList;
         }
 
-        public void RepoAddPage(BasePage p)
+        public void RepoAddPage(BasePage p,string pageName)
         {
+            p.PageName = pageName;
             this.pageList.Add(p);
         }
         public void DeletePage(string deleteName)

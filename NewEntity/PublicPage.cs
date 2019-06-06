@@ -6,6 +6,5 @@ namespace NewEntity
 {
     public class PublicPage:BasePage
     {
-        public int NumberofFollowers { get; set; }
     }
 }

@@ -6,6 +6,5 @@ namespace NewEntity
 {
     public class PublicPost:BasePost
     {
-        public int NumberOfLikes { get; set; }
     }
 }

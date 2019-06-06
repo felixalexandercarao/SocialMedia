@@ -17,15 +17,12 @@ namespace _03.NewRepository
                 Body = "Sample Public Post",
                 ViewablePost = true,
                 PostDateCreated =DateTime.Now,
-                NumberOfLikes = 0
                 },
                 new PrivatePost()
                 {
                 Body = "Sample Private Post",
                 ViewablePost = false,
                 PostDateCreated =DateTime.Now,
-                SecretPostInfo="This is a sample secret page"
-
                 }
             };
         }
@@ -34,8 +31,9 @@ namespace _03.NewRepository
             return this.postList;
         }
 
-        public void RepoAddPost(BasePost p)
+        public void RepoAddPost(BasePost p,string postBody)
         {
+            p.Body = postBody;
             this.postList.Add(p);
         }
         public void DeletePost(string deleteBody)

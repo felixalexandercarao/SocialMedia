@@ -6,6 +6,5 @@ namespace NewEntity
 {
     public class PrivatePage:BasePage
     {
-        public string SecretPageInfo { get; set; }
     }
 }

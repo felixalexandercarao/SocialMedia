@@ -3,9 +3,9 @@ using NewEntity;
 
 namespace _03.NewBusiness
 {
-    abstract class ObjectFactory
+    interface  IObjectFactory
     {
-        public abstract BasePost createPost(string postBodyInput,DateTime postDateCreated);
-        public abstract BasePage createPage(string pageNameInput, DateTime pageDateCreated);
+        BasePost createPost(/*string postBodyInput,DateTime postDateCreated*/);
+        BasePage createPage(/*string pageNameInput, DateTime pageDateCreated*/);
     }
 }

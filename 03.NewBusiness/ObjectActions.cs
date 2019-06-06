@@ -8,23 +8,36 @@ namespace _03.NewBusiness
 {
     class AddObject
     {
-        PageList PL = new PageList();
+        PageList PgL = new PageList();
         PostList PstL = new PostList();
-        public void AddPage(ObjectFactory OF, string pageName)
+        PublicObjectFactory OFPublic = new PublicObjectFactory();
+        PrivateObjectFactory OFPrivate = new PrivateObjectFactory();
+        public void AddPageAndPost(string privacy)
         {
-            PL.RepoAddPage(OF.createPage(pageName, DateTime.Now));
-            Console.WriteLine("In the Method:");
-            foreach (BasePage pg in PL.GetPageList())
+            Console.Write("Input your desired name: ");
+            string nameInput = Console.ReadLine();
+            Console.Write("Input your first post: ");
+            string postInput = Console.ReadLine();
+            if (privacy == "Public")
+            {  
+                PgL.RepoAddPage(OFPublic.createPage(),nameInput);
+                PstL.RepoAddPost(OFPublic.createPost(),postInput);
+            }
+            if (privacy == "Private")
+            {
+                PgL.RepoAddPage(OFPrivate.createPage(),nameInput);
+                PstL.RepoAddPost(OFPrivate.createPost(),postInput);
+            }
+
+
+            foreach (BasePage pg in PgL.GetPageList())
             {
                 Console.WriteLine("Name: {0} | Public: {1}", pg.PageName, pg.ViewablePage);
             }
-        }
-        public void AddPost(ObjectFactory OF, string postName)
-        {
-            PstL.RepoAddPost(OF.createPost(postName, DateTime.Now));
-            foreach (BasePost pst in PstL.GetPostList())
+            Console.WriteLine("");
+            foreach (BasePost p in PstL.GetPostList())
             {
-                Console.WriteLine("Body: {0} | Public: {1}", pst.Body, pst.ViewablePost);
+                Console.WriteLine("Body: {0} | Public: {1}", p.Body, p.ViewablePost);
             }
         }
     }
