@@ -4,7 +4,5 @@ using System.Text;
 
 namespace NewEntity
 {
-    public class PrivatePage:BasePage
-    {
-    }
+    public class PrivatePage : BasePage { }
 }

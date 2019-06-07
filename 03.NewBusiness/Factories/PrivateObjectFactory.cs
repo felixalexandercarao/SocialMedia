@@ -5,17 +5,17 @@ namespace _03.NewBusiness
 {
     class PrivateObjectFactory : IObjectFactory
     {
-        public BasePage createPage(/*string pageNameInput, DateTime pageDateCreated*/)
+        public BasePage createPage()
         {
             return new PrivatePage()
             {
                 PageName =string.Empty,
                 ViewablePage = false,
-                PageDateCreated=DateTime.Now
+                PageDateCreated=DateTime.Now,
             };
         }
 
-        public BasePost createPost(/*string postBodyInput, DateTime postDateCreated*/)
+        public BasePost createPost()
         {
             return new PrivatePost()
             {

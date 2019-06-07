@@ -16,13 +16,13 @@ namespace _03.NewRepository
                 {
                 PageName = "Sample Public Page",
                 ViewablePage = true,
-                PageDateCreated =DateTime.Now
+                PageDateCreated =DateTime.Now,
                 },
                 new PrivatePage()
                 {
                 PageName = "Sample Private Page",
                 ViewablePage = false,
-                PageDateCreated=DateTime.Now
+                PageDateCreated=DateTime.Now,
                 }
             };
         }

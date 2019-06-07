@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,6 +11,6 @@ namespace NewEntity
 
         public bool ViewablePage { get; set; }
         public DateTime PageDateCreated { get; set; }
+        public UsabilityLevel _state;
     }
-
 }
