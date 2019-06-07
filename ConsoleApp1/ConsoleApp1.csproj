@@ -7,10 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\03.NewBusiness\03.NewBusiness.csproj" />
-    <ProjectReference Include="..\Business\3.Business.csproj" />
-    <ProjectReference Include="..\Domain\1.Entity.csproj" />
     <ProjectReference Include="..\NewEntity\01.NewEntity.csproj" />
-    <ProjectReference Include="..\Repository\2.Repository.csproj" />
   </ItemGroup>
 
 </Project>

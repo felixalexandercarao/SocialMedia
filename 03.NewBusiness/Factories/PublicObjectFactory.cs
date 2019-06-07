@@ -7,7 +7,7 @@ namespace _03.NewBusiness
 {
     class PublicObjectFactory : IObjectFactory
     {
-        public BasePage createPage(/*string pageNameInput, DateTime pageDateCreated*/)
+        public BasePage createPage()
         {
             return new PublicPage()
             {
@@ -17,7 +17,7 @@ namespace _03.NewBusiness
             };
         }
 
-        public BasePost createPost(/*string postBodyInput, DateTime postDateCreated*/)
+        public BasePost createPost()
         {
             return new PublicPost()
             {

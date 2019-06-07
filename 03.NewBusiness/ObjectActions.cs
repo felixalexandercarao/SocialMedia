@@ -6,36 +6,34 @@ using NewEntity;
 
 namespace _03.NewBusiness
 {
-    class AddObject
+    public class AddObject
     {
-        PageList PgL = new PageList();
-        PostList PstL = new PostList();
+        PageList pageList = new PageList();
+        PostList postList = new PostList();
         PublicObjectFactory OFPublic = new PublicObjectFactory();
         PrivateObjectFactory OFPrivate = new PrivateObjectFactory();
-        public void AddPageAndPost(string privacy)
+        public void AddPageAndPost(string privacy, string nameInput)
         {
-            Console.Write("Input your desired name: ");
-            string nameInput = Console.ReadLine();
-            Console.Write("Input your first post: ");
-            string postInput = Console.ReadLine();
             if (privacy == "Public")
-            {  
-                PgL.RepoAddPage(OFPublic.createPage(),nameInput);
-                PstL.RepoAddPost(OFPublic.createPost(),postInput);
+            {
+                BasePage newPage = OFPublic.createPage();
+                newPage.PageName = nameInput;
+                pageList.RepoAddPage(newPage);
+                postList.RepoAddPost(OFPublic.createPost());
             }
             if (privacy == "Private")
             {
-                PgL.RepoAddPage(OFPrivate.createPage(),nameInput);
-                PstL.RepoAddPost(OFPrivate.createPost(),postInput);
+                BasePage newPage = OFPrivate.createPage();
+                newPage.PageName = nameInput;
+                pageList.RepoAddPage(newPage);
+                postList.RepoAddPost(OFPrivate.createPost());
             }
-
-
-            foreach (BasePage pg in PgL.GetPageList())
+            foreach (BasePage pg in pageList.GetPageList())
             {
                 Console.WriteLine("Name: {0} | Public: {1}", pg.PageName, pg.ViewablePage);
             }
             Console.WriteLine("");
-            foreach (BasePost p in PstL.GetPostList())
+            foreach (BasePost p in postList.GetPostList())
             {
                 Console.WriteLine("Body: {0} | Public: {1}", p.Body, p.ViewablePost);
             }

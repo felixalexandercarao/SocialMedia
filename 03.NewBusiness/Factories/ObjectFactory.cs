@@ -5,7 +5,7 @@ namespace _03.NewBusiness
 {
     interface  IObjectFactory
     {
-        BasePost createPost(/*string postBodyInput,DateTime postDateCreated*/);
-        BasePage createPage(/*string pageNameInput, DateTime pageDateCreated*/);
+        BasePost createPost();
+        BasePage createPage();
     }
 }

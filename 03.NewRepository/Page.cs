@@ -31,10 +31,9 @@ namespace _03.NewRepository
             return this.pageList;
         }
 
-        public void RepoAddPage(BasePage p,string pageName)
+        public void RepoAddPage(BasePage page)
         {
-            p.PageName = pageName;
-            this.pageList.Add(p);
+            this.pageList.Add(page);
         }
         public void DeletePage(string deleteName)
         {

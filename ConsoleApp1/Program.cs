@@ -15,12 +15,14 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Access a = new Access();
-            PageList PgL = new PageList();
+            AddObject access = new AddObject();
             Console.Write("Input your privacy level(Private or Public): ");
             string privacy = Console.ReadLine();
-            Console.WriteLine("");
-            a.AccessPageAndPostCreate(privacy); 
+
+            Console.Write("Input your desired name: ");
+            string nameInput = Console.ReadLine();
+
+            access.AddPageAndPost(privacy,nameInput);
         }
     }
 }

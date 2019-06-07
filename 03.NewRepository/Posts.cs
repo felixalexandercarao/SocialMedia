@@ -31,10 +31,9 @@ namespace _03.NewRepository
             return this.postList;
         }
 
-        public void RepoAddPost(BasePost p,string postBody)
+        public void RepoAddPost(BasePost post)
         {
-            p.Body = postBody;
-            this.postList.Add(p);
+            this.postList.Add(post);
         }
         public void DeletePost(string deleteBody)
         {

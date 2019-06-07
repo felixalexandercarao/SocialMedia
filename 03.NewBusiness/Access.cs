@@ -9,9 +9,9 @@ namespace _03.NewBusiness
     public class Access
     {
         AddObject AO = new AddObject();
-        public void AccessPageAndPostCreate(string privacy)
+        public void AccessPageAndPostCreate(string privacy,string nameInput)
         {
-            AO.AddPageAndPost(privacy);
+            AO.AddPageAndPost(privacy,nameInput);
         }
 
     }
